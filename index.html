@@ -1,883 +1,707 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-  <head>
-    <!-- meta data -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<html lang="en">
 
-    <!--font-family-->
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&amp;subset=devanagari,latin-ext"
-      rel="stylesheet"
-    />
+<head>
+    <meta charset="utf-8">
+    <title>ProMan - Personal Portfolio HTML Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
-    <!-- title of site -->
-    <title>Portfolio</title>
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
 
-    <!-- For favicon png -->
-    <link
-      rel="shortcut icon"
-      type="image/icon"
-      href="assets/logo/favicon.png"
-    />
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
 
-    <!--font-awesome.min.css-->
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!--flat icon css-->
-    <link rel="stylesheet" href="assets/css/flaticon.css" />
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
-    <!--animate.css-->
-    <link rel="stylesheet" href="assets/css/animate.css" />
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!--owl.carousel.css-->
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
 
-    <!--bootstrap.min.css-->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-
-    <!-- bootsnav -->
-    <link rel="stylesheet" href="assets/css/bootsnav.css" />
-
-    <!--style.css-->
-    <link rel="stylesheet" href="assets/css/style.css" />
-
-    <!--responsive.css-->
-    <link rel="stylesheet" href="assets/css/responsive.css" />
-
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  </head>
-
-  <body>
-    <!--[if lte IE 9]>
-      <p class="browserupgrade">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
-        your experience and security.
-      </p>
-    <![endif]-->
-
-    <!-- top-area Start -->
-    <header class="top-area">
-      <div class="header-area">
-        <!-- Start Navigation -->
-        <nav
-          class="navbar navbar-default bootsnav navbar-fixed dark no-background"
-        >
-          <div class="container">
-            <!-- Start Header Navigation -->
-            <div class="navbar-header">
-              <button
-                type="button"
-                class="navbar-toggle"
-                data-toggle="collapse"
-                data-target="#navbar-menu"
-              >
-                <i class="fa fa-bars"></i>
-              </button>
-              <a class="navbar-brand" href="index.html">M.M.A</a>
-            </div>
-            <!--/.navbar-header-->
-            <!-- End Header Navigation -->
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div
-              class="collapse navbar-collapse menu-ui-design"
-              id="navbar-menu"
-            >
-              <ul
-                class="nav navbar-nav navbar-right"
-                data-in="fadeInDown"
-                data-out="fadeOutUp"
-              >
-                <li class="smooth-menu active"></li>
-                <li class="smooth-menu"><a href="#education">education</a></li>
-                <li class="smooth-menu"><a href="#skills">skills</a></li>
-                <li class="smooth-menu">
-                  <a href="#experience">experience</a>
-                </li>
-                <li class="smooth-menu"><a href="#profiles">profile</a></li>
-                <li class="smooth-menu"><a href="#portfolio">portfolio</a></li>
-                <li class="smooth-menu"><a href="#contact">contact</a></li>
-              </ul>
-              <!--/.nav -->
-            </div>
-            <!-- /.navbar-collapse -->
-          </div>
-          <!--/.container-->
-        </nav>
-        <!--/nav-->
-        <!-- End Navigation -->
-      </div>
-      <!--/.header-area-->
-
-      <div class="clearfix"></div>
-    </header>
-    <!-- /.top-area-->
-    <!-- top-area End -->
-
-    <!--welcome-hero start -->
-    <section id="welcome-hero" class="welcome-hero">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <div class="header-text">
-              <h2>
-                hi <span>,</span> i am <br />
-                mian m. <br />
-                arslan <span>.</span>
-              </h2>
-              <p>Software Engineer</p>
-              <a href="assets/download/CV - Mian Muhammad Arslan.pdf" download
-                >download resume</a
-              >
-            </div>
-            <!--/.header-text-->
-          </div>
-          <!--/.col-->
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
         </div>
-        <!-- /.row-->
-      </div>
-      <!-- /.container-->
-    </section>
-    <!--/.welcome-hero-->
-    <!--welcome-hero end -->
+    </div>
+    <!-- Spinner End -->
 
-    <!--about start -->
-    <section id="about" class="about">
-      <div class="section-heading text-center">
-        <h2>about me</h2>
-      </div>
-      <div class="container">
-        <div class="about-content">
-          <div class="row">
-            <div class="col-sm-6" data-aos="fade-right">
-              <div class="single-about-txt">
-                <h3>
-                  I am a software engineer 2+ years of experience in web app
-                  development. Deployment knowledge of AWS. High-quality
-                  software delivered by a problem-solver.
-                </h3>
-                <p>
-                  I've developed a strong foundation in producing high-quality
-                  and user-friendly software solutions over the course of my
-                  more than two years of web application development expertise.
-                  Because of my expertise, I can install apps on AWS with
-                  optimal uptime and dependability for my clients. I've been
-                  able to rapidly fix any concerns that may come up during the
-                  development process because to my problem-solving skills and
-                  attention to detail, consistently producing solutions that are
-                  efficient and flawless. I'm dedicated to producing software
-                  that goes above and beyond what clients anticipate and
-                  promotes company success, whether I'm working alone or as part
-                  of a team.
-                </p>
-              </div>
-            </div>
-            <div class="col-sm-offset-1 col-sm-5" data-aos="fade-down-left">
-              <div class="single-about-img">
-                <img
-                  src="assets/images/about/profile.jpeg "
-                  alt="profile_image"
-                />
-                <div class="about-list-icon">
-                  <ul>
-                    <li>
-                      <a href="#">
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <!-- / li -->
-                    <li>
-                      <a href="https://github.com/MianMArslan">
-                        <i class="fa fa-github-square" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <!-- / li -->
-                    <li>
-                      <a href="https://twitter.com/Mian_M_Arslan">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <!-- / li -->
-                    <li>
-                      <a
-                        href="https://www.linkedin.com/in/mian-muhammad-arslan-5aa9191a6"
-                      >
-                        <i class="fa fa-linkedin" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <!-- / li -->
-                  </ul>
-                  <!-- / ul -->
-                </div>
-                <!-- /.about-list-icon -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--/.about-->
-    <!--about end -->
 
-    <!--education start -->
-    <section id="education" class="education">
-      <div class="section-heading text-center">
-        <h2>education</h2>
-      </div>
-      <div class="container">
-        <div class="education-horizontal-timeline">
-          <div class="row" data-aos="fade-top">
-            <div class="col-sm-4">
-              <div class="single-horizontal-timeline">
-                <div class="experience-time">
-                  <h2>2018 - 2022</h2>
-                  <h3>bachelor <span>of </span> software engineering</h3>
-                </div>
-                <!--/.experience-time-->
-                <div class="timeline-horizontal-border">
-                  <i class="fa fa-circle" aria-hidden="true"></i>
-                  <span class="single-timeline-horizontal"></span>
-                </div>
-                <div class="timeline">
-                  <div class="timeline-content">
-                    <h4 class="title">the superior college</h4>
-                    <h5>lahore, pakistan</h5>
-                  </div>
-                  <!--/.timeline-content-->
-                </div>
-                <!--/.timeline-->
-              </div>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+        <a href="index.html" class="navbar-brand d-block d-lg-none">
+            <h1 class="text-primary fw-bold m-0">MySelf</h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between py-4 py-lg-0" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="#home" class="nav-item nav-link active">Home</a>
+                <a href="#about" class="nav-item nav-link">About</a>
+                <a href="#skill" class="nav-item nav-link">Skills</a>
+                <a href="#service" class="nav-item nav-link">Services</a>
             </div>
-            <div class="col-sm-4">
-              <div class="single-horizontal-timeline">
-                <div class="experience-time">
-                  <h2>2016 - 2018</h2>
-                  <h3>intermediate <span>in </span> computer science</h3>
-                </div>
-                <!--/.experience-time-->
-                <div class="timeline-horizontal-border">
-                  <i class="fa fa-circle" aria-hidden="true"></i>
-                  <span class="single-timeline-horizontal"></span>
-                </div>
-                <div class="timeline">
-                  <div class="timeline-content">
-                    <h4 class="title">govt. college, model town</h4>
-                    <h5>lahore, pakistan</h5>
-                  </div>
-                  <!--/.timeline-content-->
-                </div>
-                <!--/.timeline-->
-              </div>
+            <a href="index.html" class="navbar-brand bg-secondary py-3 px-4 mx-3 d-none d-lg-block">
+                <h1 class="text-primary fw-bold m-0">MySelf</h1>
+            </a>
+            <div class="navbar-nav me-auto py-0">
+                <a href="#project" class="nav-item nav-link">Projects</a>
+                <a href="#team" class="nav-item nav-link">Team</a>
+                <a href="#testimonial" class="nav-item nav-link">Testimonial</a>
+                <a href="#contact" class="nav-item nav-link">Contact</a>
             </div>
-          </div>
         </div>
-      </div>
-    </section>
-    <!--/.education-->
-    <!--education end -->
+    </nav>
+    <!-- Navbar End -->
 
-    <!--skills start -->
-    <section id="skills" class="skills">
-      <div class="skill-content">
-        <div class="section-heading text-center">
-          <h2>skills</h2>
-        </div>
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-light my-6 mt-0" id="home">
         <div class="container">
-          <div class="row">
-            <h1 style="font-size: 22px; margin: 10px">Frontend</h1>
-            <div class="col-md-12" data-aos="flip-right">
-              <span
-                class="badge badge-primary"
-                style="font-size: 15px; background-color: #75dbb6"
-                >Angular 7+</span
-              >&nbsp;
-              <span
-                class="badge badge-primary"
-                style="font-size: 15px; background-color: #75dbb6"
-                >Material UI</span
-              >&nbsp;
-              <span
-                class="badge badge-primary"
-                style="font-size: 15px; background-color: #75dbb6"
-                >HTML/HTML 5 </span
-              >&nbsp;
-              <span
-                class="badge badge-primary"
-                style="font-size: 15px; background-color: #75dbb6"
-                >CSS/SCSS</span
-              >&nbsp;
-              <span
-                class="badge badge-primary"
-                style="font-size: 15px; background-color: #75dbb6"
-                >React Js/ Next Js</span
-              >&nbsp;
-              <span
-                class="badge badge-primary"
-                style="font-size: 15px; background-color: #75dbb6"
-                >Knowledge of AJAX, JQuery, JSON</span
-              >&nbsp;
-              <span
-                class="badge badge-primary"
-                style="font-size: 15px; background-color: #75dbb6"
-                >Bootstrap</span
-              >
-            </div>
-          </div>
-          <hr />
-          <div class="row">
-            <h1 style="font-size: 22px; margin: 10px">Backend</h1>
-            <div class="col-md-12" data-aos="flip-right">
-              <span
-                class="badge badge-primary"
-                style="font-size: 15px; background-color: #75dbb6"
-                >Javascript</span
-              >&nbsp;
-              <span
-                class="badge badge-primary"
-                style="font-size: 15px; background-color: #75dbb6"
-                >Template Engine (EJS)</span
-              >&nbsp;
-              <span
-                class="badge badge-primary"
-                style="font-size: 15px; background-color: #75dbb6"
-                >ORM</span
-              >&nbsp;
-              <span
-                class="badge badge-primary"
-                style="font-size: 15px; background-color: #75dbb6"
-                >Node.js (Express.js/Nest.js)</span
-              >&nbsp;
-              <span
-                class="badge badge-primary"
-                style="font-size: 15px; background-color: #75dbb6"
-                >Web Sockets</span
-              >&nbsp;
-              <span
-                class="badge badge-primary"
-                style="font-size: 15px; background-color: #75dbb6"
-                >RestFull API</span
-              >&nbsp;
-              <span
-                class="badge badge-primary"
-                style="font-size: 15px; background-color: #75dbb6"
-                >JWT</span
-              >&nbsp;
-              <span
-                class="badge badge-primary"
-                style="font-size: 15px; background-color: #75dbb6"
-                >Fetch/Axios</span
-              >&nbsp;
-              <span
-                class="badge badge-primary"
-                style="font-size: 15px; background-color: #75dbb6"
-                >NodeMailer</span
-              >
-            </div>
-          </div>
-          <hr />
-          <div class="row">
-            <h1 style="font-size: 22px; margin: 10px">Databases</h1>
-            <div class="col-md-12" data-aos="flip-right">
-              <span
-                class="badge badge-primary"
-                style="font-size: 15px; background-color: #75dbb6"
-                >MySQL</span
-              >&nbsp;
-              <span
-                class="badge badge-primary"
-                style="font-size: 15px; background-color: #75dbb6"
-                >MongoDB</span
-              >&nbsp;
-              <span
-                class="badge badge-primary"
-                style="font-size: 15px; background-color: #75dbb6"
-                >Firebase (Basic)</span
-              >&nbsp;
-              <span
-                class="badge badge-primary"
-                style="font-size: 15px; background-color: #75dbb6"
-                >PostgreSQL</span
-              >
-            </div>
-          </div>
-          <hr />
-          <div class="row">
-            <h1 style="font-size: 22px; margin: 10px">Deployment</h1>
-            <div class="col-md-12" data-aos="flip-right">
-              <span
-                class="badge badge-primary"
-                style="font-size: 15px; background-color: #75dbb6"
-                >Docker</span
-              >&nbsp;
-              <span
-                class="badge badge-primary"
-                style="font-size: 15px; background-color: #75dbb6"
-                >NGINX</span
-              >&nbsp;
-              <span
-                class="badge badge-primary"
-                style="font-size: 15px; background-color: #75dbb6"
-                >AWS - EC2</span
-              >&nbsp;
-              <span
-                class="badge badge-primary"
-                style="font-size: 15px; background-color: #75dbb6"
-                >AWS Lightsail</span
-              >&nbsp;
-              <span
-                class="badge badge-primary"
-                style="font-size: 15px; background-color: #75dbb6"
-                >CI /CD</span
-              >&nbsp;
-              <span
-                class="badge badge-primary"
-                style="font-size: 15px; background-color: #75dbb6"
-                >PM2</span
-              >
-            </div>
-          </div>
-          <hr />
-          <div class="row">
-            <h1 style="font-size: 22px; margin: 10px">Project Management</h1>
-            <div class="col-md-12" data-aos="flip-right">
-              <span
-                class="badge badge-primary"
-                style="font-size: 15px; background-color: #75dbb6"
-                >Git</span
-              >&nbsp;
-              <span
-                class="badge badge-primary"
-                style="font-size: 15px; background-color: #75dbb6"
-                >Github</span
-              >&nbsp;
-              <span
-                class="badge badge-primary"
-                style="font-size: 15px; background-color: #75dbb6"
-                >Bitbucket</span
-              >&nbsp;
-              <span
-                class="badge badge-primary"
-                style="font-size: 15px; background-color: #75dbb6"
-                >Postman</span
-              >&nbsp;
-              <span
-                class="badge badge-primary"
-                style="font-size: 15px; background-color: #75dbb6"
-                >Trello</span
-              >&nbsp;
-              <span
-                class="badge badge-primary"
-                style="font-size: 15px; background-color: #75dbb6"
-                >Jira</span
-              >&nbsp;
-              <span
-                class="badge badge-primary"
-                style="font-size: 15px; background-color: #75dbb6"
-                >Slack</span
-              >
-            </div>
-          </div>
-          <!-- /.row -->
-        </div>
-        <!-- /.container -->
-      </div>
-      <!-- /.skill-content-->
-    </section>
-    <!--/.skills-->
-    <!--skills end -->
-
-    <!--experience start -->
-    <section id="experience" class="experience">
-      <div class="section-heading text-center">
-        <h2>experience</h2>
-      </div>
-      <div class="container">
-        <div class="experience-content">
-          <div class="main-timeline">
-            <ul>
-              <li>
-                <div class="single-timeline-box fix">
-                  <div class="row">
-                    <div class="col-md-5" data-aos="fade-right">
-                      <div class="experience-time text-right">
-                        <h2>2022 - Present</h2>
-                        <h3>software engineer</h3>
-                      </div>
-                      <!--/.experience-time-->
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 py-6 pb-0 pt-lg-0">
+                    <h3 class="text-primary mb-3">I'm</h3>
+                    <h1 class="display-3 mb-3">Mian M. Arslan</h1>
+                    <h2 class="typed-text-output d-inline"></h2>
+                    <div class="typed-text d-none">Web Application Developer, Software Engineer</div>
+                    <div class="d-flex align-items-center pt-5">
+                        <a href="" class="btn btn-primary py-3 px-4 me-5">Download CV</a>
+                        <button type="button" class="btn-play" data-bs-toggle="modal"
+                            data-src="https://www.youtube.com/embed/UelcrxBWio8" data-bs-target="#videoModal">
+                            <span></span>
+                        </button>
+                        <h5 class="ms-4 mb-0 d-none d-sm-block">Play Video</h5>
                     </div>
-                    <!--/.col-->
-                    <div class="col-md-offset-1 col-md-5" data-aos="fade-left">
-                      <div class="timeline">
-                        <div class="timeline-content">
-                          <h4 class="title">
-                            <span
-                              ><i class="fa fa-circle" aria-hidden="true"></i
-                            ></span>
-                            iDevNerds
-                          </h4>
-                          <h5>lahore, pakistan</h5>
+                </div>
+                <div class="col-lg-6">
+                    <img class="img-fluid" src="img/profile.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Video Modal Start -->
+    <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">Youtube Video</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- 16:9 aspect ratio -->
+                    <div class="ratio ratio-16x9">
+                        <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
+                            allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Video Modal End -->
+
+
+    <!-- About Start -->
+    <div class="container-xxl py-6" id="about">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="d-flex align-items-center mb-5">
+                        <div class="years flex-shrink-0 text-center me-4">
+                            <h1 class="display-1 mb-0">3</h1>
+                            <h5 class="mb-0">Years</h5>
                         </div>
-                        <!--/.timeline-content-->
-                      </div>
-                      <!--/.timeline-->
+                        <h3 class="lh-base mb-0">of working experience as a software engineer</h3>
                     </div>
-                    <!--/.col-->
-                  </div>
+                    <p class="mb-4">I have experience in multiple technologies.</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Angular 11+</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Next js</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Node js</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Aws (Lightsail, S3, EC2)</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Git/GitHub</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Many More...</p>
                 </div>
-                <!--/.single-timeline-box-->
-              </li>
-
-              <li>
-                <div class="single-timeline-box fix">
-                  <div class="row">
-                    <div class="col-md-5" data-aos="fade-right">
-                      <div class="experience-time text-right">
-                        <h2>2021 - 2022</h2>
-                        <h3>associate software engineer</h3>
-                      </div>
-                      <!--/.experience-time-->
-                    </div>
-                    <!--/.col-->
-                    <div class="col-md-offset-1 col-md-5" data-aos="fade-left">
-                      <div class="timeline">
-                        <div class="timeline-content">
-                          <h4 class="title">
-                            <span
-                              ><i class="fa fa-circle" aria-hidden="true"></i
-                            ></span>
-                            iDevNerds
-                          </h4>
-                          <h5>lahore, pakistan</h5>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="row g-3 mb-4">
+                        <div class="col-sm-12">
+                            <img class="img-fluid rounded" src="img/about-1.svg" alt="">
                         </div>
-                        <!--/.timeline-content-->
-                      </div>
-                      <!--/.timeline-->
+                        <!-- <div class="col-sm-6">
+                            <img class="img-fluid rounded" src="img/about-2.jpg" alt="">
+                        </div> -->
                     </div>
-                    <!--/.col-->
-                  </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <h5 class="border-end pe-3 me-3 mb-0">Happy Clients</h5>
+                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">2</h2>
+                    </div>
+                    <p class="mb-4"></p>
+                    <div class="d-flex align-items-center mb-3">
+                        <h5 class="border-end pe-3 me-3 mb-0">Projects Completed</h5>
+                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">7</h2>
+                    </div>
+                    <p class="mb-0">You can find these in project section.</p>
                 </div>
-                <!--/.single-timeline-box-->
-              </li>
-            </ul>
-          </div>
-          <!--.main-timeline-->
+            </div>
         </div>
-        <!--.experience-content-->
-      </div>
-    </section>
-    <!--/.experience-->
-    <!--experience end -->
+    </div>
+    <!-- About End -->
 
-    <!--profiles start -->
-    <section id="profiles" class="profiles">
-      <div class="profiles-details">
-        <div class="section-heading text-center">
-          <h2>profiles</h2>
-        </div>
+
+    <!-- Expertise Start -->
+    <div class="container-xxl py-6 pb-5" id="skill">
         <div class="container">
-          <div class="profiles-content">
-            <div class="row">
-              <div class="col-sm-4">
-                <div class="single-profile">
-                  <div class="profile-txt">
-                    <a href="https://dribbble.com/mian_m_arslan"
-                      ><i class="flaticon-dribbble"></i
-                    ></a>
-                    <div class="profile-icon-name">dribbble</div>
-                  </div>
-                  <div class="single-profile-overlay">
-                    <div class="profile-txt">
-                      <a href="https://dribbble.com/mian_m_arslan"
-                        ><i class="flaticon-dribbble"></i
-                      ></a>
-                      <div class="profile-icon-name">dribbble</div>
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="display-5 mb-5">Skills & Experience</h1>
+                    <h3 class="mb-4">My Skills</h3>
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">HTML</h6>
+                                    <h6 class="font-weight-bold">90%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">CSS</h6>
+                                    <h6 class="font-weight-bold">85%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">JavaScript</h6>
+                                    <h6 class="font-weight-bold">85%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">TypeScript</h6>
+                                    <h6 class="font-weight-bold">85%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Next js</h6>
+                                    <h6 class="font-weight-bold">80%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Angular</h6>
+                                    <h6 class="font-weight-bold">80%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Node js</h6>
+                                    <h6 class="font-weight-bold">85%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">React Js</h6>
+                                    <h6 class="font-weight-bold">95%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="single-profile">
-                  <div class="profile-txt">
-                    <a href="https://twitter.com/Mian_M_Arslan"
-                      ><i class="flaticon-behance-logo"></i
-                    ></a>
-                    <div class="profile-icon-name">twitter</div>
-                  </div>
-                  <div class="single-profile-overlay">
-                    <div class="profile-txt">
-                      <a href="https://twitter.com/Mian_M_Arslan"
-                        ><i class="flaticon-behance-logo"></i
-                      ></a>
-                      <div class="profile-icon-name">twitter</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="single-profile profile-no-border">
-                  <div class="profile-txt">
-                    <a href="https://github.com/MianMArslan">
-                      <i class="fa fa-github-square" aria-hidden="true"></i>
-                    </a>
-                    <div class="profile-icon-name">github</div>
-                  </div>
-                  <div class="single-profile-overlay">
-                    <div class="profile-txt">
-                      <a href="https://github.com/MianMArslan"
-                        ><i class="fa fa-github-square" aria-hidden="true"></i>
-                      </a>
-                      <div class="profile-icon-name">github</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--/.profiles-->
-    <!--profiles end -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <ul class="nav nav-pills rounded border border-2 border-primary mb-5">
+                        <li class="nav-item w-50">
+                            <button class="nav-link w-100 py-3 fs-5 active" data-bs-toggle="pill" href="#tab-1">Experience</button>
+                        </li>
+                        <li class="nav-item w-50">
+                            <button class="nav-link w-100 py-3 fs-5" data-bs-toggle="pill" href="#tab-2">Education</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane fade show p-0 active">
+                            <div class="row gy-5 gx-4">
+                                <div class="col-sm-6">
+                                    <h5>Software Engineer</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">Jan 2023 - Present</p>
+                                    <!-- <h6 class="mb-0">Apex Software Inc</h6> -->
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Associate Software Engineer</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">Sept 2021 - Dec 2022</p>
+                                    <!-- <h6 class="mb-0">Apex Software Inc</h6> -->
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Mobile App development</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">Jan 2021 - May 2021</p>
+                                    <!-- <h6 class="mb-0">Apex Software Inc</h6> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-pane fade show p-0">
+                            <div class="row gy-5 gx-4">
+                                <div class="col-sm-6">
+                                    <h5>BS Software Engineering</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2018 - 2022</p>
+                                    <h6 class="mb-0">Superior University</h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Backend Development (Node js)</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">Sept 2021</p>
+                                    <h6 class="mb-0">Code with mosh</h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Git</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">Oct 2021</p>
+                                    <h6 class="mb-0">Code with mosh</h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Angular Development</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">Dec 2021</p>
+                                    <h6 class="mb-0">Code with mosh</h6>
+                                </div>
 
-    <!--portfolio start -->
-    <section id="portfolio" class="portfolio">
-      <div class="portfolio-details">
-        <div class="section-heading text-center">
-          <h2>portfolio</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+    <!-- Expertise End -->
+
+
+    <!-- Service Start -->
+    <div class="container-fluid bg-light my-5 py-6" id="service">
         <div class="container">
-          <div class="portfolio-content">
-            <div class="isotope">
-              <div class="row">
-                <div class="col-sm-4">
-                  <div class="item">
-                    <img
-                      src="assets/images/portfolio/p1.jpg"
-                      alt="portfolio image"
-                    />
-                    <div class="isotope-overlay">
-                      <a href="#"> ui/ux design </a>
-                    </div>
-                    <!-- /.isotope-overlay -->
-                  </div>
-                  <!-- /.item -->
-                  <div class="item">
-                    <img
-                      src="assets/images/portfolio/p2.jpg"
-                      alt="portfolio image"
-                    />
-                    <div class="isotope-overlay">
-                      <a href="#"> ui/ux design </a>
-                    </div>
-                    <!-- /.isotope-overlay -->
-                  </div>
-                  <!-- /.item -->
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">My Services</h1>
                 </div>
-                <!-- /.col -->
-
-                <div class="col-sm-4">
-                  <div class="item">
-                    <img
-                      src="assets/images/portfolio/p3.jpg"
-                      alt="portfolio image"
-                    />
-                    <div class="isotope-overlay">
-                      <a href="#"> web design </a>
-                    </div>
-                    <!-- /.isotope-overlay -->
-                  </div>
-                  <!-- /.item -->
+                <div class="col-lg-6 text-lg-end">
+                    <a class="btn btn-primary py-3 px-5" href="">Hire Me</a>
                 </div>
-                <!-- /.col -->
-
-                <div class="col-sm-4">
-                  <div class="item">
-                    <img
-                      src="assets/images/portfolio/p4.jpg"
-                      alt="portfolio image"
-                    />
-                    <div class="isotope-overlay">
-                      <a href="#"> web development </a>
-                    </div>
-                    <!-- /.isotope-overlay -->
-                  </div>
-                  <!-- /.item -->
-                  <div class="item">
-                    <img
-                      src="assets/images/portfolio/p5.jpg"
-                      alt="portfolio image"
-                    />
-                    <div class="isotope-overlay">
-                      <a href="#"> web development </a>
-                    </div>
-                    <!-- /.isotope-overlay -->
-                  </div>
-                  <!-- /.item -->
-                </div>
-                <!-- /.col -->
-              </div>
-              <!-- /.row -->
             </div>
-            <!--/.isotope-->
-          </div>
-          <!--/.gallery-content-->
-        </div>
-        <!--/.container-->
-      </div>
-      <!--/.portfolio-details-->
-    </section>
-    <!--/.portfolio-->
-    <!--portfolio end -->
-
-    <!--contact start -->
-    <section id="contact" class="contact">
-      <div class="section-heading text-center">
-        <h2>contact me</h2>
-      </div>
-      <div class="container">
-        <div class="contact-content">
-          <div class="row">
-            <div class="col-md-12 col-sm-6">
-              <div class="single-contact-box">
-                <div
-                  class="contact-adress"
-                  style="display: flex; justify-content: space-around"
-                >
-                  <div class="contact-add-head">
-                    <h3>Mian M. Arslan</h3>
-                    <p>Software Engineer</p>
-                  </div>
-                  <div class="contact-add-head">
-                    <h3>Phone</h3>
-                    <p>(+92) 302-4406446</p>
-                  </div>
-                  <div class="contact-add-head">
-                    <h3>Email</h3>
-                    <p>mian.m.arslan@hotmail.com</p>
-                  </div>
+            <div class="row g-4">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-crop-alt fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Creative Design</h4>
+                            <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6>
+                            <span>Stet lorem dolor diam amet vero eos. No stet est diam amet diam ipsum. Clita dolor duo clita sit sed sit dolor eos.</span>
+                        </div>
+                    </div>
                 </div>
-                <!--/.contact-adress-->
-                <div
-                  class="hm-foot-icon"
-                  style="display: flex; margin-top: 20px"
-                >
-                  <ul
-                    style="
-                      width: 100%;
-                      display: flex;
-                      justify-content: space-around;
-                    "
-                  >
-                    <li>
-                      <a href="#"
-                        ><i style="font-size: 30px" class="fa fa-facebook"></i
-                      ></a>
-                    </li>
-                    <!--/li-->
-                    <li>
-                      <a href="https://github.com/MianMArslan">
-                        <i
-                          style="font-size: 30px"
-                          class="fa fa-github-square"
-                          aria-hidden="true"
-                        ></i>
-                      </a>
-                    </li>
-                    <!--/li-->
-                    <li>
-                      <a href="https://twitter.com/Mian_M_Arslan"
-                        ><i style="font-size: 30px" class="fa fa-twitter"></i
-                      ></a>
-                    </li>
-                    <!--/li-->
-                    <li>
-                      <a
-                        href="https://www.linkedin.com/in/mian-muhammad-arslan-5aa9191a6"
-                        ><i style="font-size: 30px" class="fa fa-linkedin"></i
-                      ></a>
-                    </li>
-                    <!--/li-->
-                  </ul>
-                  <!--/ul-->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-code-branch fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Graphic Design</h4>
+                            <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6>
+                            <span>Stet lorem dolor diam amet vero eos. No stet est diam amet diam ipsum. Clita dolor duo clita sit sed sit dolor eos.</span>
+                        </div>
+                    </div>
                 </div>
-                <!--/.hm-foot-icon-->
-              </div>
-              <!--/.single-contact-box-->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-code fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Web Design</h4>
+                            <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6>
+                            <span>Stet lorem dolor diam amet vero eos. No stet est diam amet diam ipsum. Clita dolor duo clita sit sed sit dolor eos.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-laptop-code fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">UI/UX Design</h4>
+                            <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6>
+                            <span>Stet lorem dolor diam amet vero eos. No stet est diam amet diam ipsum. Clita dolor duo clita sit sed sit dolor eos.</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!--/.col-->
-          </div>
-          <!--/.row-->
         </div>
-        <!--/.contact-content-->
-      </div>
-      <!--/.container-->
-    </section>
-    <!--/.contact-->
-    <!--contact end -->
+    </div>
+    <!-- Service End -->
 
-    <!--footer-copyright start-->
-    <footer id="footer-copyright" class="footer-copyright">
-      <div class="container">
-        <div class="hm-footer-copyright text-center">
-          <p>&copy; copyright Mian Muhammad Arslan.</p>
-          <!--/p-->
+
+    <!-- Projects Start -->
+    <div class="container-xxl py-6 pt-5" id="project">
+        <div class="container">
+            <div class="row g-5 mb-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">My Projects</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <ul class="list-inline mx-n3 mb-0" id="portfolio-flters">
+                        <li class="mx-3 active" data-filter="*">All Projects</li>
+                        <li class="mx-3" data-filter=".first">UI/UX Design</li>
+                        <li class="mx-3" data-filter=".second">Graphic Design</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/project-1.jpg" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/project-2.jpg" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-2.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/project-3.jpg" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/project-4.jpg" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-4.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/project-5.jpg" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-5.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/project-6.jpg" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-6.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!--/.text-center-->
-      </div>
-      <!--/.container-->
+    </div>
+    <!-- Projects End -->
 
-      <div id="scroll-Top">
-        <div class="return-to-top">
-          <i class="fa fa-angle-up" id="scroll-top"></i>
+
+    <!-- Team Start -->
+    <div class="container-xxl py-6 pb-5" id="team">
+        <div class="container">
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">Team Members</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <a class="btn btn-primary py-3 px-5" href="">Contact Us</a>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item position-relative" style=" height: 480px; width: 400px;">
+                        <img class="img-fluid rounded" src="img/team-1.svg" alt="">
+                        <div class="team-text bg-white rounded-end p-4">
+                            <div>
+                                <h5>Hamza Yousaf</h5>
+                                <span>Web Application Developer</span>
+                            </div>
+                            <i class="fa fa-arrow-right fa-2x text-primary"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item position-relative" style=" height: 480px; width: 400px;">
+                        <img class="img-fluid rounded" src="img/team-2.svg" alt="">
+                        <div class="team-text bg-white rounded-end p-4">
+                            <div>
+                                <h5>Ramzan Ch</h5>
+                                <span>Mobile Application Developer</span>
+                            </div>
+                            <i class="fa fa-arrow-right fa-2x text-primary"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item position-relative">
+                        <img class="img-fluid rounded" src="img/team-3.jpg" alt="">
+                        <div class="team-text bg-white rounded-end p-4">
+                            <div>
+                                <h5>Full Name</h5>
+                                <span>Designer</span>
+                            </div>
+                            <i class="fa fa-arrow-right fa-2x text-primary"></i>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
         </div>
-      </div>
-      <!--/.scroll-Top-->
-    </footer>
-    <!--/.footer-copyright-->
-    <!--footer-copyright end-->
+    </div>
+    <!-- Team End -->
 
-    <!-- Include all js compiled plugins (below), or include individual files as needed -->
 
-    <script src="assets/js/jquery.js"></script>
+    <!-- Testimonial Start -->
+    <div class="container-fluid bg-light py-5 my-5" id="testimonial">
+        <div class="container-fluid py-5">
+            <h1 class="display-5 text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Testimonial</h1>
+            <div class="row justify-content-center">
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="testimonial-left h-100">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="img/testimonial-1.jpg" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="img/testimonial-2.jpg" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.5s" src="img/testimonial-3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="owl-carousel testimonial-carousel">
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/testimonial-1.jpg" alt="">
+                                <div class="testimonial-icon">
+                                    <i class="fa fa-quote-left text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-5 fst-italic">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
+                            <hr class="w-25 mx-auto">
+                            <h5>Client Name</h5>
+                            <span>Profession</span>
+                        </div>
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/testimonial-2.jpg" alt="">
+                                <div class="testimonial-icon">
+                                    <i class="fa fa-quote-left text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-5 fst-italic">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
+                            <hr class="w-25 mx-auto">
+                            <h5>Client Name</h5>
+                            <span>Profession</span>
+                        </div>
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/testimonial-3.jpg" alt="">
+                                <div class="testimonial-icon">
+                                    <i class="fa fa-quote-left text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-5 fst-italic">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
+                            <hr class="w-25 mx-auto">
+                            <h5>Client Name</h5>
+                            <span>Profession</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="testimonial-right h-100">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="img/testimonial-1.jpg" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="img/testimonial-2.jpg" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.5s" src="img/testimonial-3.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
 
-    <!--modernizr.min.js-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 
-    <!--bootstrap.min.js-->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Contact Start -->
+    <div class="container-xxl pb-5" id="contact">
+        <div class="container py-5">
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">Let's Work Together</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <a class="btn btn-primary py-3 px-5" href="">Say Hello</a>
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <!-- <p class="mb-2">My office:</p>
+                    <h3 class="fw-bold">123 Street, New York, USA</h3>
+                    <hr class="w-100"> -->
+                    <p class="mb-2">Call me:</p>
+                    <h3 class="fw-bold">+92 302 440 6446</h3>
+                    <hr class="w-100">
+                    <!-- <p class="mb-2">Mail me:</p>
+                    <h3 class="fw-bold">mian.m.arslan@hotmail.com</h3>
+                    <hr class="w-100"> -->
+                    <p class="mb-2">Follow me:</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-primary me-2" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                    <label for="name">Your Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                    <label for="email">Your Email</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                    <label for="subject">Subject</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
+                                    <label for="message">Message</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary py-3 px-5" type="submit">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
 
-    <!-- bootsnav js -->
-    <script src="assets/js/bootsnav.js"></script>
 
-    <!-- jquery.sticky.js -->
-    <script src="assets/js/jquery.sticky.js"></script>
+    <!-- Map Start -->
+    <!-- <div class="container-xxl pt-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container-xxl pt-5 px-0">
+            <div class="bg-dark">
+                <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
+                frameborder="0" style="width: 100%; height: 450px; border:0;" allowfullscreen="" aria-hidden="false"
+                tabindex="0"></iframe>
+            </div>
+        </div>
+    </div> -->
+    <!-- Map End -->
 
-    <!-- for progress bar start-->
 
-    <!-- progressbar js -->
-    <script src="assets/js/progressbar.js"></script>
+    <!-- Copyright Start -->
+    <div class="container-fluid bg-dark text-white py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom text-secondary" href="#">Mian M. Arslan</a>, All Right Reserved.
+                    </div>
+                    <!-- <div class="col-md-6 text-center text-md-end"> -->
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        <!-- Designed By <a class="border-bottom text-secondary" href="https://htmlcodex.com">HTML Codex</a> -->
+                        <!-- <br>Distributed By: <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a> -->
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
 
-    <!-- appear js -->
-    <script src="assets/js/jquery.appear.js"></script>
 
-    <!-- for progress bar end -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
-    <!--owl.carousel.js-->
-    <script src="assets/js/owl.carousel.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
 
-    <!--Custom JS-->
-    <script src="assets/js/custom.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
 
-    <script>
-      AOS.init();
-    </script>
-  </body>
 </html>
